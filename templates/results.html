@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overall Performance</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .score-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .final-score {
+            font-size: 72px;
+            color: #2ecc71;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .score-label {
+            font-size: 28px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .wordcloud-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .wordcloud-container {
+            margin: 20px 0;
+        }
+
+        .wordcloud-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Overall Performance</h1>
+        </div>
+
+        <div class="score-section">
+            <div class="score-label">Final Empathy Score</div>
+            <div class="final-score">{{ "%.2f"|format(final_score) }}</div>
+        </div>
+
+        {% if wordcloud_b64 %}
+        <div class="wordcloud-section">
+            <h2>Empathy Word Cloud</h2>
+            <div class="wordcloud-container">
+                <img class="wordcloud-img" src="data:image/png;base64,{{ wordcloud_b64 }}" alt="Word Cloud">
+            </div>
+        </div>
+        {% endif %}
+
+        <div style="text-align: center;">
+            <a href="/" class="back-button">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html> 
