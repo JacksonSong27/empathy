@@ -21,9 +21,9 @@ This project is a Flask-based web application designed to visualize and analyze 
 ### 1. Clone the Repository
 
 ### 2. Create a Python Virtual Environment (Recommended)
-python -m venv venv
-source venv/bin/activate      # macOS/Linux
-venv\Scripts\activate         # Windows
+- python -m venv venv
+- source venv/bin/activate      # macOS/Linux
+- venv\Scripts\activate         # Windows
 
 ### 3. Install Dependencies
 pip install -r requirements.txt
@@ -33,7 +33,6 @@ python run.py
 
 Open your browser and go to:
 http://localhost:8000/
-
 
 ## 📬 API Endpoint
 
