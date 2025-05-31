@@ -50,30 +50,33 @@ Send external JSON input using Postman or curl.
 ## 🖥 Project Structure
 
 Empathy/
-├── src/
-│   └── app/
-│       ├── __init__.py         # Flask app setup & factory pattern
-│       ├── analysis.py         # Empathy scoring logic (e.g., using OpenAI)
-│       ├── config.py           # App configuration
-│       ├── data_store.py       # Stores in-memory session data
-│       ├── graphing.py         # Score progression graph generation
-│       ├── pdf_generator.py    # PDF report formatting and generation
-│       ├── routes.py           # All Flask route endpoints (UI & API)
-│       ├── word_utils.py       # Word cloud and keyword analysis
-│       └── templates/          # Jinja2 HTML templates
-│           ├── welcome.html    # Main live dashboard UI
-│           ├── index.html      # Graph visualization UI
-│           └── results.html    # Summary + word cloud view
-├── static/
-│   └── node_modules/
-│       └── dotenv/         # Local JS/Node dependencies (if applicable)
-├── .env                    # Need to create (e.g., OpenAI key)
-├── .gitignore              # Files/folders Git should ignore
-├── package-lock.json       # Optional Node.js lock file
-├── package.json            # Optional Node.js config
-├── README.md               # Project documentation (you are reading this)
-├── requirements.txt        # Python dependencies
-├── run.py                  # Main entry point to start the Flask app
+- src/
+  - app/
+    - __init__.py           # Flask app setup & factory pattern
+    - analysis.py           # Empathy scoring logic (e.g., using OpenAI)
+    - config.py             # App configuration
+    - data_store.py         # Stores in-memory session data
+    - graphing.py           # Score progression graph generation
+    - pdf_generator.py      # PDF report formatting and generation
+    - routes.py             # All Flask route endpoints (UI & API)
+    - word_utils.py         # Word cloud and keyword analysis
+    - templates/            # Jinja2 HTML templates
+      - welcome.html        # Main live dashboard UI
+      - index.html          # Graph visualization UI
+      - results.html        # Summary + word cloud view
+
+- static/
+  - node_modules/
+    - dotenv/              # Local JS/Node dependencies (if applicable)
+
+- .env                     # Need to create (e.g., OpenAI key)
+- .gitignore               # Files/folders Git should ignore
+- package-lock.json        # Optional Node.js lock file
+- package.json             # Optional Node.js config
+- README.md                # Project documentation (you are reading this)
+- requirements.txt         # Python dependencies
+- run.py                   # Main entry point to start the Flask app
+
 
 ## 📤 PDF Export
 - You can download a full empathy report in PDF format.
