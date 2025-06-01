@@ -36,14 +36,23 @@ http://localhost:8000/
 
 ## 📬 API Endpoint
 
-POST /external_input
-Send external JSON input using Postman or curl.
+### POST /external_input
+- Send external JSON input using Postman or curl.
 
-### Payload Format:
+Format:
 {
   "Park": "Message about parking",
   "Siren&Lights": "Lights-related input",
   "Behaviour": "Observed behavior input"
+}
+
+### POST /add_dialogue
+- Accepts user dialogue text and its computed empathy score for visualization and reporting.
+
+Format:
+{
+  "text": "I understand how you feel.",
+  "score": 0.87
 }
 
 ## 🖥 Project Structure
